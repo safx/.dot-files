@@ -1,0 +1,30 @@
+[user]
+	name = Safx
+	email = safxdev@gmail.com
+[core]
+	excludesfile = /Users/safx/.gitignore_global
+	deltaBaseCacheLimit = 1G
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /opt/homebrew-cask/Caskroom/p4merge/2014.1/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	trustExitCode = true
+
+[alias]
+	s = status
+	c = checkout
+	b = branch
+	amend      = !git commit --amend --date=`date +%s` --no-edit
+	amend-edit = !git commit --amend --date=`date +%s`
+	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t = \\2/' | sort
+
+st = status
+co = checkout
+br = branch
+
+[push]
+	default = simple
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

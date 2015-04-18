@@ -1,0 +1,43 @@
+^ ### terminal settings
+defencoding eucJP
+termcap  xterm 'AF=\E[3%dm:AB=\E[4%dm'
+terminfo xterm 'AF=\E[3%p1%dm:AB=\E[4%p1%dm'
+termcap  kterm 'AF=\E[3%dm:AB=\E[4%dm'
+terminfo kterm 'AF=\E[3%p1%dm:AB=\E[4%p1%dm'
+
+
+### misc
+startup_message off
+autodetach on
+defscrollback 4096
+msgminwait 0
+zombie "q^M"
+
+caption always  "%?%F%{+b wB}%:%{= bc}%? %-Lw%{+s wR}[%n %t]%{-}%+Lw"
+#caption always  "%?%F%{+b wB}%:%{= bc}%? %-Lw%{+s wR}[%n %t]%{-}%+Lw %= %H %m/%d(%D) %0c %{-}"
+hardstatus ignore "%H - %Y/%m/%d %0c %{-}"
+
+
+### key binds
+escape ^]^]
+bind ^] next
+bind ^[ prev
+bind o focus
+bind w split
+bind p remove
+bind q only
+bind ' ' copy
+bind y paste .
+bind \^ eval 'source $HOME/.screenrc' 'echo reloaded.'
+bind ^w exec $HOME/bin/screen-word
+bind ! exec kill -KILL \%1
+
+### resize mode
+bind r eval 'echo "Window resizing mode"' 'command -c resize'
+bind -c resize ^]  command
+bind -c resize j eval 'resize +1' 'command -c resize'
+bind -c resize k eval 'resize -1' 'command -c resize'
+
+### init
+bind i eval 'screen 0 su' 'number 0' 'number 0' 'screen 2'
+
