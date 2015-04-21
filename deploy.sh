@@ -1,5 +1,7 @@
-DOT_DIR=$PWD
-cd $HOME
-for i in $DOT_DIR/.[a-zA-Z]*; do
-    ln -s $i
+
+
+for i in .[a-zA-Z]* ; do
+    if [ "$i" != ".git" ]; then
+        (cd $HOME && [ -h "$i" ] && rm $i && ln -s .dot-files/$i && ls -l $i)
+    fi
 done
