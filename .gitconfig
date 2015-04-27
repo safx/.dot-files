@@ -6,15 +6,20 @@
 	deltaBaseCacheLimit = 1G
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /opt/homebrew-cask/Caskroom/p4merge/2014.1/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 	trustExitCode = true
 
 [alias]
+	a = add
+	A = add -A
 	s = status
 	c = checkout
 	b = branch
+	l = log
+	m = commit -m
+	p = push
 	amend      = !git commit --amend --date=`date +%s` --no-edit
 	amend-edit = !git commit --amend --date=`date +%s`
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t = \\2/' | sort

@@ -1,4 +1,4 @@
-
+#!/bin/sh
 
 for i in .[a-zA-Z]* ; do
     if [ "$i" != ".git" ]; then
