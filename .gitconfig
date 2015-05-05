@@ -24,10 +24,6 @@
 	amend-edit = !git commit --amend --date=`date +%s`
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t = \\2/' | sort
 
-st = status
-co = checkout
-br = branch
-
 [push]
 	default = simple
 [filter "media"]
