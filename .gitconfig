@@ -20,6 +20,7 @@
 	l = log
 	m = commit -m
 	p = push
+	co = checkout
 	amend      = !git commit --amend --date=`date +%s` --no-edit
 	amend-edit = !git commit --amend --date=`date +%s`
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t = \\2/' | sort
