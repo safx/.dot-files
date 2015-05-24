@@ -13,13 +13,14 @@
 
 [alias]
 	a = add
-	A = add -A
-	s = status
-	c = checkout
+        A = add -A
 	b = branch
+	c = checkout
+	d = diff
 	l = log
 	m = commit -m
-	p = push
+        p = push
+	s = status
 	co = checkout
 	amend      = !git commit --amend --date=`date +%s` --no-edit
 	amend-edit = !git commit --amend --date=`date +%s`
