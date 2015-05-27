@@ -21,6 +21,7 @@
 	m = commit -m
         p = push
 	s = status
+	t = tag
 	co = checkout
 	amend      = !git commit --amend --date=`date +%s` --no-edit
 	amend-edit = !git commit --amend --date=`date +%s`
