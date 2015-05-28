@@ -17,6 +17,7 @@
 	b = branch
 	c = checkout
 	d = diff
+	g = grep
 	l = log
 	m = commit -m
         p = push
