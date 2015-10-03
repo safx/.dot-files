@@ -1,12 +1,14 @@
-[user]
-	name = Safx
-	email = safxdev@gmail.com
+[include]
+	path = ~/.gitconfig_local
+
 [core]
-	excludesfile = /Users/safx/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	deltaBaseCacheLimit = 1G
+
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
+
 [mergetool "sourcetree"]
 	cmd = /opt/homebrew-cask/Caskroom/p4merge/2014.1/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 	trustExitCode = true
@@ -32,6 +34,7 @@
 
 [push]
 	default = simple
+
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
