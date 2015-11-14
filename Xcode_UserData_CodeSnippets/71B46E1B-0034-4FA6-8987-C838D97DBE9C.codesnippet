@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>d_t</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
+dispatch_source_set_timer(timer, dispatch_time(DISPATCH_TIME_NOW, 0), UInt64(USEC_PER_SEC * &lt;# time #&gt;), 0)
+
+dispatch_source_set_event_handler(timer) { () -&gt; Void in
+    &lt;# body #&gt;
+}
+dispatch_resume(timer)
+//dispatch_suspend(timer)
+//dispatch_source_cancel(timer)
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>71B46E1B-0034-4FA6-8987-C838D97DBE9C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>dispatch_timer</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
