@@ -23,6 +23,7 @@ while true {
     let bs = "__(BACKSLASH)__"
     let cmdx = cmd
                .stringByReplacingOccurrencesOfString("\\\\", withString: bs)
+               .stringByReplacingOccurrencesOfString("C:\\", withString: "\\")
                .stringByReplacingOccurrencesOfString("Z:\\", withString: "\\")
                .stringByReplacingOccurrencesOfString("\\", withString: "/")
                .stringByReplacingOccurrencesOfString("$HOME", withString: home)
