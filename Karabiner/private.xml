@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>Eisuu to Return</name>
+    <identifier>private.eisuu_to_return</identifier>
+    <autogen>__KeyToKey__ KeyCode::JIS_EISUU, KeyCode::RETURN</autogen>
+  </item>
+
+  <item>
+    <name>Kana to BackSpace</name>
+    <identifier>private.kana_to_backspace</identifier>
+    <autogen>__KeyToKey__ KeyCode::JIS_KANA, KeyCode::PC_BS</autogen>
+  </item>
+</root>
