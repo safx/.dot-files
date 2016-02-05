@@ -18,6 +18,7 @@
         A = add -A
 	b = branch
 	c = checkout
+	co = checkout
 	d = diff
 	g = grep
 	l = log
@@ -25,11 +26,10 @@
         p = push
 	s = status
 	t = tag
-	co = checkout
 	z = clean -fd
 	amend      = !git commit --amend --date=`date +%s` --no-edit
 	amend-edit = !git commit --amend --date=`date +%s`
-	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\t = \\2/' | sort
+	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\t = \\2/' | sort
 	wip = commit -m 'WIP' -a
 
 [push]
