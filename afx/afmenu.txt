@@ -1,0 +1,8 @@
+afx menu
+"clip"		&clip 80F81AC50DA4458D8C46AFA3DCF8E451 echo "'$P\$F'" | tr '\\n' ' ' | pbcopy
+"open"		&clip 80F81AC50DA4458D8C46AFA3DCF8E451 open "$P\$F"
+"finder"	&clip 80F81AC50DA4458D8C46AFA3DCF8E451 open -a Finder "$P"
+"emacs"		&clip 80F81AC50DA4458D8C46AFA3DCF8E451 $HOME/Applications/Emacs.app/Contents/MacOS/bin/emacsclient --no-wait "$P\$F"
+"mpv"		&clip 80F81AC50DA4458D8C46AFA3DCF8E451 $HOME/Applications/mpv.app/Contents/MacOS/mpv "$P\$F"
+"vlc"		&clip 80F81AC50DA4458D8C46AFA3DCF8E451 $HOME/Applications/VLC.app/Contents/MacOS/VLC "$P\$F"
+"CooViewer"	&clip 80F81AC50DA4458D8C46AFA3DCF8E451 open -a CooViewer "$P\$F"

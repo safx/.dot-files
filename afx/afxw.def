@@ -1,0 +1,59 @@
+﻿[AFXW]
+CFG=ON
+
+[EXT_NORMAL]
+E_000=flv mkv mp4 mov
+S_000="&clip 80F81AC50DA4458D8C46AFA3DCF8E451 $HOME/Applications/mpv.app/Contents/MacOS/mpv "$P\$F""
+E_001=pdf
+S_001="&clip 80F81AC50DA4458D8C46AFA3DCF8E451 open -a Preview "$P\$F""
+E_002=nsa
+N_002="&S_ARC axnsa.spi"
+E_003=jar epub
+N_003="&V_ARC"
+S_003="java -jar "$P\$F""
+E_004=ogg wma mp3 wsx flac asx
+S_004="&clip 80F81AC50DA4458D8C46AFA3DCF8E451 $HOME/Applications/mpv.app/Contents/MacOS/mpv "$P\$F""
+E_005=jpg png
+S_005="&clip 80F81AC50DA4458D8C46AFA3DCF8E451 open -a CooViewer "$P\$F""
+E_006=zip rar 7z
+N_006="&V_ARC"
+S_006="&clip 80F81AC50DA4458D8C46AFA3DCF8E451 open -a CooViewer "$P\$F""
+E_007=bpg
+N_007="&SUSIE IFBPG.SPI"
+
+[KEY_DEF]
+KEY_06="&clip $P\$F"
+KEY_07="&menu Z:\Users\safx\Applications\afxw.app\drive_c\Program Files\afxw32_156\afmenu.txt"
+KEY_08="&EACH "$~\afxclip.exe" "$P\$F""
+KEY_11="C:\tools\xyzzy\AfxKView.exe"
+
+[REG_DIR]
+PRT_00="home"
+DIR_00=Z:\Users\safx\src
+PRT_01="downloads"
+DIR_01=Z:\Users\safx\Downloads\
+PRT_02="tmp"
+DIR_02=Z:\tmp\
+
+[REG_MSK]
+PRT_00="INPUT"
+MSK_00="!"
+PRT_01="default"
+MSK_01=":*.dll :*.*~ :*~"
+PRT_02="archive"
+MSK_02="*.zip *.gz *.bz2 *.rar *.7z"
+PRT_03="backup"
+MSK_03="*~ *.*~ *.bak"
+PRT_04="dll"
+MSK_04="*.dll"
+PRT_05="image"
+MSK_05="*.jpg *.jpeg *.png *.bmp *.gif *.tif *.tiff"
+
+[REG_COL]
+COL_00=255
+EXT_00=exe com bat
+COL_01=16744576
+EXT_01=lzh zip cab tar gz2 bz2 tbz tgz
+COL_02=16776960
+EXT_02=txt
+
