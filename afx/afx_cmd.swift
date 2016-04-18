@@ -18,7 +18,7 @@ while true {
 
     let start = s.startIndex.advancedBy(cmd_prefix.characters.count)
     let end = s.endIndex
-    let cmd = s.substringWithRange(Range<String.Index>(start: start, end: end))
+    let cmd = s.substringWithRange(start..<end)
 
     let bs = "__(BACKSLASH)__"
     let cmdx = cmd
