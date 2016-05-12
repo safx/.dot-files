@@ -1,7 +1,13 @@
 *~
-.DS_Store
-Breakpoints.xcbkptlist
-WorkspaceSettings.xcsettings
 *.orig
 *.rej
-safx.locuser
+.DS_Store
+
+# Xcode
+Breakpoints.xcbkptlist
+WorkspaceSettings.xcsettings
+*.locuser
+
+# scala
+.ensime
+.ensime_cache
