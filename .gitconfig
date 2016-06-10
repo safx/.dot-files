@@ -5,13 +5,13 @@
 	excludesfile = ~/.gitignore_global
 	deltaBaseCacheLimit = 1G
 
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+[merge]
+	keepBackup = false
+	tool = p4merge
 
-[mergetool "sourcetree"]
-	cmd = /opt/homebrew-cask/Caskroom/p4merge/2014.1/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
-	trustExitCode = true
+[mergetool "p4merge"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	trustExitCode = false
 
 [alias]
 	a = add
