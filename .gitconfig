@@ -21,6 +21,7 @@
 	co = checkout
 	d = diff
 	ds = diff --staged
+	f = fetch
 	g = grep
 	l = log
 	m = commit -m
