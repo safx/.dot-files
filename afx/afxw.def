@@ -2,22 +2,22 @@
 CFG=ON
 
 [EXT_NORMAL]
-E_000=flv mkv mp4 mov
-S_000="&clip 80F81AC50DA4458D8C46AFA3DCF8E451 $HOME/Applications/mpv.app/Contents/MacOS/mpv "$P\$F""
+E_000=avi flv mkv mp4 mov wmv m4a rm
+S_000="&clip 80F81AC50DA4458D8C46AFA3DCF8E451 /usr/local/bin/mpv	$P\$F"
 E_001=pdf
-S_001="&clip 80F81AC50DA4458D8C46AFA3DCF8E451 open -a Preview "$P\$F""
+S_001="&clip 80F81AC50DA4458D8C46AFA3DCF8E451 /usr/bin/open	-a	Preview $P\$F"
 E_002=nsa
 N_002="&S_ARC axnsa.spi"
 E_003=jar epub
 N_003="&V_ARC"
 S_003="java -jar "$P\$F""
 E_004=ogg wma mp3 wsx flac asx
-S_004="&clip 80F81AC50DA4458D8C46AFA3DCF8E451 $HOME/Applications/mpv.app/Contents/MacOS/mpv "$P\$F""
+S_004="&clip 80F81AC50DA4458D8C46AFA3DCF8E451 /usr/local/bin/mpv	$P\$F"
 E_005=jpg png
-S_005="&clip 80F81AC50DA4458D8C46AFA3DCF8E451 open -a CooViewer "$P\$F""
+S_005="&clip 80F81AC50DA4458D8C46AFA3DCF8E451 /usr/bin/open -a CooViewer $P\$F"
 E_006=zip rar 7z
 N_006="&V_ARC"
-S_006="&clip 80F81AC50DA4458D8C46AFA3DCF8E451 open -a CooViewer "$P\$F""
+S_006="&clip 80F81AC50DA4458D8C46AFA3DCF8E451 /usr/bin/open	-a	CooViewer	$P\$F"
 E_007=bpg
 N_007="&SUSIE IFBPG.SPI"
 
@@ -25,6 +25,7 @@ N_007="&SUSIE IFBPG.SPI"
 KEY_06="&clip $P\$F"
 KEY_07="&menu Z:\Users\safx\Applications\afxw.app\drive_c\Program Files\afxw32_156\afmenu.txt"
 KEY_08="&EACH "$~\afxclip.exe" "$P\$F""
+KEY_09="&clip 80F81AC50DA4458D8C46AFA3DCF8E451 echo "$P\$F" | pbcopy"
 KEY_11="C:\tools\xyzzy\AfxKView.exe"
 
 [REG_DIR]
