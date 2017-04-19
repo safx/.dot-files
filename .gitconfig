@@ -17,17 +17,19 @@
 	a = add
         A = add -A
 	b = branch
+	bd = branch --sort creatordate --no-merged develop
+	bm = branch --sort creatordate --no-merged master
 	c = checkout
 	co = checkout
-	d = diff
-	ds = diff --staged
+	#d = diff
+	#ds = diff --staged
 	f = fetch
-	g = grep
-	l = log
+	#g = grep
+	#l = log
 	m = commit -m
         p = push
         poo = !git push -u origin $(git branch | grep '^*' | cut -b 3-)
-	s = status
+	#s = status
 	t = tag
         z = clean -fd
 	amend = !git commit --amend --date=`date +%s` --no-edit
