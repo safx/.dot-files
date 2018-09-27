@@ -29,7 +29,7 @@
 	m = commit -m
         p = push
         poo = !git push -u origin $(git branch | grep '^*' | cut -b 3-)
-	#s = status
+	s = status
 	r = remote -v
 	t = tag
         z = clean -fd

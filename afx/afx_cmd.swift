@@ -6,7 +6,7 @@ let token = "80F81AC50DA4458D8C46AFA3DCF8E451"
 
 let pb = NSPasteboard.general
 let home = String(validatingUTF8: getenv("HOME")) ?? ""
-let cmd_prefix = token + " "
+let cmd_prefix = token
 
 while true {
     sleep(1)
@@ -17,7 +17,7 @@ while true {
     pb.clearContents()
 
     let start = s.index(after: cmd_prefix.endIndex)
-    let cmd = s.substring(from: start)
+    let cmd = s[start...]
 
     print(cmd)
     let bs = "__(BACKSLASH)__"
