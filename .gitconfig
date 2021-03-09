@@ -21,8 +21,7 @@
 	bm = branch --sort creatordate --no-merged master
 	c = checkout
 	co = checkout
-	#d = diff
-	#ds = diff --staged
+	d = diff --color-moved=dimmed-zebra --color-moved-ws=allow-indentation-change --ignore-all-space --function-context
 	f = fetch
 	#g = grep
 	#l = log
@@ -40,6 +39,19 @@
 [push]
 	default = simple
 
+[diff]
+	algorithm = patience
+
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[init]
+	defaultBranch = main
+[pull]
+	ff = only
