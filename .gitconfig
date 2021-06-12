@@ -27,6 +27,7 @@
 	#l = log
 	m = commit -m
         p = push
+	pf = push --force-with-lease
         poo = !git push -u origin $(git branch | grep '^*' | cut -b 3-)
 	s = status
 	r = remote -v
