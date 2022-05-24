@@ -14,8 +14,7 @@
 	trustExitCode = false
 
 [alias]
-	a = add
-        A = add -A
+        a = add -A
 	b = branch
 	bd = branch --sort creatordate --no-merged develop
 	bm = branch --sort creatordate --no-merged master
@@ -26,8 +25,8 @@
 	#g = grep
 	#l = log
 	m = commit -m
-        p = push
-	pf = push --force-with-lease
+        p = push --force-with-lease
+	pf = push
         poo = !git push -u origin $(git branch | grep '^*' | cut -b 3-)
 	s = status
 	r = remote -v

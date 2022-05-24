@@ -11,3 +11,6 @@ WorkspaceSettings.xcsettings
 # scala
 .ensime
 .ensime_cache
+
+# asdf
+.tool-versions
