@@ -1,6 +1,3 @@
-alias ..='cd ..'
-alias ...='cd ...'
-alias ....='cd ....'
 alias dc='docker compose'
 alias di='docker image list'
 alias dps='docker ps'
