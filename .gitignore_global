@@ -14,3 +14,11 @@ WorkspaceSettings.xcsettings
 
 # asdf
 .tool-versions
+
+# rtx
+.rtx.toml
+
+# js
+*.hot-update.js
+*.hot-update.js.map
+*.hot-update.json

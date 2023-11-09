@@ -1,0 +1,73 @@
+add_newline = true
+scan_timeout = 50
+command_timeout = 800
+format = """ $time $directory$git_commit$git_branch$git_status$git_state$git_metrics${custom.aws_sso}$cmd_duration
+$character"""
+
+[cmd_duration]
+min_time = 30_000
+format = "( ⏱[$duration](bold yellow))"
+
+[time]
+format = '$time'
+time_format = "%H:%M:%S"
+utc_time_offset = "+9"
+disabled = false
+
+[directory]
+style = "green"
+truncation_length = 10
+truncate_to_repo = false
+repo_root_style = "white"
+repo_root_format = "[$before_root_path](fg:#666666)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style)"
+
+
+[git_branch]
+format = " [$branch(:$remote_branch)]($style)"
+style = "cyan"
+
+[git_commit]
+format = " [$hash$tag]($style)"
+style = "cyan"
+tag_disabled = false
+disabled = false
+
+[git_status]
+format 	= " $all_status$ahead_behind"
+conflicted = "[⊘](yellow)"
+ahead 	   = "[▴](cyan)"
+behind 	   = "[▾](purple)"
+diverged   = "[▴](cyan)[▾](purple)"
+up_to_date = ""
+untracked  = "[●](fg:#ff6060)"
+stashed    = ""
+modified   = "[●](yellow)"
+staged     = "[●](green)"
+renamed    = "[»](cyan)"
+deleted    = "[✘](red)"
+
+[git_metrics]
+format = '( [+$added]($added_style))( [-$deleted]($deleted_style))'
+added_style   = "green"
+deleted_style = "red"
+disabled = false
+
+[git_state]
+format = ' [$state( $progress_current/$progress_total)]($style)'
+disabled = false
+
+[custom.aws_sso]
+format = '[( 🅰 $output)]($cyan)'
+command = """
+latest_file=$(ls -t ~/.aws/sso/cache/*.json | head -n 1)
+if [[ -f "$latest_file" ]]; then
+  expiresAt=$(cat "$latest_file" | jq '.expiresAt')
+  duration=$(( $(TZ=UTC date -j -f '"%Y-%m-%dT%H:%M:%SZ"' $expiresAt +%s) - $(TZ=UTC date +%s) ))
+  if [[ "$duration" -gt 0 ]] ; then
+    hours=$(( duration / 3600 ))
+    minutes=$(( (duration % 3600) / 60 ))
+    printf "%02d:%02d" $hours $minutes
+  fi
+fi
+"""
+when = true

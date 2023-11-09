@@ -21,6 +21,7 @@
 	c = checkout
 	co = checkout
 	d = diff --color-moved=dimmed-zebra --color-moved-ws=allow-indentation-change --ignore-all-space --function-context
+	di = diff --color-moved=dimmed-zebra --color-moved-ws=allow-indentation-change --ignore-all-space --function-context --no-ext-diff
 	f = fetch
 	#g = grep
 	#l = log
@@ -35,12 +36,15 @@
 	amend = !git commit --amend --date=`date +%s` --no-edit
 	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\t = \\2/' | sort
 	wip = commit -m 'WIP' -a
+        sh = show --ext-diff
 
 [push]
 	default = simple
+        useForceIfIncludes = true
 
 [diff]
 	algorithm = patience
+	external = difft
 
 [filter "media"]
 	clean = git-media-clean %f
@@ -55,3 +59,8 @@
 	defaultBranch = main
 [pull]
 	ff = only
+[scalar]
+	repo = /Users/mac/src/backlog/backlog-ios/src
+	repo = /Users/mac/src/backlog/backlog-scala
+[maintenance]
+	repo = /Users/mac/src/backlog/backlog-ios/src
