@@ -46,6 +46,9 @@
 	algorithm = patience
 	external = difft
 
+[difftool "difft"]
+        cmd = difft --color=always
+
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
