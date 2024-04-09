@@ -34,3 +34,6 @@ alias gt='git for-each-ref --sort=committerdate --format="%(committerdate:short)
 alias gsp='git status -s | sk | cut -c 4- | pbcopy'
 alias gd="git diff"
 alias gds="git diff --staged"
+
+# unaliases
+alias gc > /dev/null && unalias gc

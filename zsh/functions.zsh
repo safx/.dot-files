@@ -14,6 +14,7 @@ function a {
     done
 }
 
+alias ga > /dev/null && unalias ga
 function ga {
     local sel
     if [ "0" -eq `git status -s | grep -v '^[AM]' | awk 'END{print NR}'` ] ; then
@@ -26,6 +27,7 @@ function ga {
     done
 }
 
+alias gb > /dev/null && unalias gb
 function gb {
     if [ ! -z "$1" ] ; then
         git checkout -q "$1" || git fetch && git checkout -q "$1"
@@ -38,6 +40,7 @@ function gb {
     fi
 }
 
+alias gcb > /dev/null && unalias gcb
 function gcb {
     local key name branch
     key=$1
@@ -48,6 +51,7 @@ function gcb {
     git checkout -b $branch
 }
 
+alias ge > /dev/null && unalias ge
 function ge {
     local sel
     if [ "0" -eq `git status -s | awk 'END{print NR}'` ] ; then
@@ -60,6 +64,7 @@ function ge {
     done
 }
 
+alias gr > /dev/null && unalias gr
 function gr {
     local sel
     if [ "0" -eq `git status -s | grep '^[AM]'  | awk 'END{print NR}'` ] ; then
@@ -72,6 +77,7 @@ function gr {
     done
 }
 
+alias gt > /dev/null && unalias gt
 function gt {
     local tag=$(git tag | sk )
     if [ ! -z "$tag" ] ; then
@@ -80,11 +86,12 @@ function gt {
     fi
 }
 
+alias gw > /dev/null && unalias gw
 function gw {
     local tag=$(git worktree list | sk --with-nth 1,3 | awk '{print $1}')
     if [ ! -z "$tag" ] ; then
-        echo $tag
-        cd "$tag"
+        local workdir=`git rev-parse --show-prefix`
+        cd "$tag/$workdir"
     fi
 }
 

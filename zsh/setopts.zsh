@@ -16,4 +16,4 @@ setopt share_history          # share command history data
 setopt auto_menu              # show completion menu on successive tab press
 setopt complete_in_word
 setopt always_to_end
-setopt extended_glob
+#setopt extended_glob
