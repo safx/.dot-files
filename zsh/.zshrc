@@ -57,15 +57,15 @@ eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
 # Wasmtime
-export WASMTIME_HOME="$HOME/.local/share/rtx/installs/wasmtime/v7.0.0"
+export WASMTIME_HOME="$HOME/.local/share/mise/installs/wasmtime/v19.0.0"
 export PATH="$WASMTIME_HOME/bin:$PATH"
 
 # bun completions
 [ -s "/Users/mac/.bun/_bun" ] && source "/Users/mac/.bun/_bun"
 
-# modular
-export MODULAR_HOME="/Users/mac/.modular"
-export PATH="/Users/mac/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
+# atuin
+export ATUIN_CONFIG_DIR=$HOME/.dot-files/atuin
+eval "$(atuin init zsh --disable-up-arrow)"
 
 # iTerm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
