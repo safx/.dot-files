@@ -45,9 +45,9 @@ export HOMEBREW_NO_ANALYTICS=1
 export DFT_PARSE_ERROR_LIMIT=99
 export DFT_BYTE_LIMIT=100000
 
-# rtx
-eval "$(/Users/mac/.cargo/bin/rtx activate zsh)"
-. =(rtx complete -s zsh)
+# mise
+eval "$(/Users/mac/.cargo/bin/mise activate zsh)"
+. =(mise complete -s zsh)
 
 # zoxide
 export _ZO_FZF_OPTS=''

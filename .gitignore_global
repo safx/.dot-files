@@ -15,8 +15,9 @@ WorkspaceSettings.xcsettings
 # asdf
 .tool-versions
 
-# rtx
+# mise
 .rtx.toml
+.mise.toml
 
 # js
 *.hot-update.js
