@@ -12,8 +12,6 @@ source "${ZGEN_HOME}/zgen.zsh"
 
 # exec `zgen reset` if you want to remove saved config file.
 if ! zgen saved; then
-    zgen oh-my-zsh
-    zgen oh-my-zsh plugins/git
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load zsh-users/zsh-autosuggestions
     zgen load zsh-users/zsh-history-substring-search

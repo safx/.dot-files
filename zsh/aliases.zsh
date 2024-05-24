@@ -1,3 +1,7 @@
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+
 alias dc='docker compose'
 alias di='docker image list'
 alias dps='docker ps'

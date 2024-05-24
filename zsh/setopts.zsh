@@ -13,7 +13,14 @@ setopt hist_verify            # show command with history expansion to user befo
 setopt share_history          # share command history data
 
 # completion
+unsetopt menu_complete        # do not autoselect the first completion entry
+unsetopt flowcontrol
 setopt auto_menu              # show completion menu on successive tab press
 setopt complete_in_word
 setopt always_to_end
 #setopt extended_glob
+
+
+#bindkey -M menuselect '^o' accept-and-infer-next-history
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]-_}={[:upper:][:lower:]_-}' 'r:|=*' 'l:|=* r:|=*'
