@@ -54,9 +54,8 @@ eval "$(zoxide init zsh)"
 # Starship
 eval "$(starship init zsh)"
 
-# Wasmtime
-export WASMTIME_HOME="$HOME/.local/share/mise/installs/wasmtime/v19.0.0"
-export PATH="$WASMTIME_HOME/bin:$PATH"
+# wasm-tools
+.  =(wasm-tools completion zsh)
 
 # bun completions
 [ -s "/Users/mac/.bun/_bun" ] && source "/Users/mac/.bun/_bun"

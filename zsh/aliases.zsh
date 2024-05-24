@@ -21,6 +21,7 @@ alias sl=ls
 alias ssh='ssh -X'
 alias typos='typos --exclude \*.js --exclude \*.css --exclude \*.trace --exclude \*.map --exclude \*.sql --exclude \*.svg'
 alias od='od -Ax -t x1 -v'
+alias wt=wasm-tools
 alias less='bat --theme=TwoDark'
 which md5sum > /dev/null && alias md5='md5sum'
 
