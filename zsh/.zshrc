@@ -32,10 +32,10 @@ done
 
 
 # ripgrep
-export RIPGREP_CONFIG_PATH=$HOME/.rg
+export RIPGREP_CONFIG_PATH=$HOME/.dot-files/.rg
 
 # skim
-export SKIM_DEFAULT_OPTIONS='--bind="ctrl-q:execute-silent(echo -n {1} | pbcopy)+abort,ctrl-k:kill-word,ctrl-d:delete-char,ctrl-w:backward-kill-word,f1:execute-silent(code {1})+abort,ctrl-v:page-down,ctrl-g:page-up,,alt-p:preview-up,alt-n:preview-down,ctrl-space:toggle+up"'
+export SKIM_DEFAULT_OPTIONS='--bind="f2:execute-silent(echo -n {1} | pbcopy)+abort,ctrl-k:kill-word,ctrl-d:delete-char,ctrl-w:backward-kill-word,f1:execute-silent(code {1})+abort,ctrl-v:page-down,ctrl-g:page-up,,alt-p:preview-up,alt-n:preview-down,ctrl-space:toggle+up"'
 
 # Homebbrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -44,7 +44,7 @@ export DFT_PARSE_ERROR_LIMIT=99
 export DFT_BYTE_LIMIT=100000
 
 # mise
-eval "$(/Users/mac/.cargo/bin/mise activate zsh)"
+eval "$($HOME/.cargo/bin/mise activate zsh)"
 . =(mise complete -s zsh)
 
 # zoxide
@@ -58,7 +58,7 @@ eval "$(starship init zsh)"
 .  =(wasm-tools completion zsh)
 
 # bun completions
-[ -s "/Users/mac/.bun/_bun" ] && source "/Users/mac/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "/Users/mac/.bun/_bun"
 
 # atuin
 export ATUIN_CONFIG_DIR=$HOME/.dot-files/atuin

@@ -20,7 +20,10 @@ setopt complete_in_word
 setopt always_to_end
 #setopt extended_glob
 
+WORDCHARS=''
 
 #bindkey -M menuselect '^o' accept-and-infer-next-history
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]-_}={[:upper:][:lower:]_-}' 'r:|=*' 'l:|=* r:|=*'
+
+autoload -U +X bashcompinit && bashcompinit
